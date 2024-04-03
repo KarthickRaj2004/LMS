@@ -2,24 +2,44 @@
 
 from django.shortcuts import render, get_object_or_404
 from .models import Course  # Import Course model
+from django.core.mail import send_mail
 
+def home(request):
+    return render(request, 'home.html')
 def course_list(request):
     main_courses = Course.objects.filter(main_course=None)
-    return render(request, 'courses/course_list.html', {'courses': main_courses})
+    return render(request, 'course_list.html', {'courses': main_courses})
 
 def contact(request):
-    return render(request, 'contact.html')
+    if request.method == 'POST':
+        name = request.POST.get('name', '')
+        email = request.POST.get('email', '')
+        subject = request.POST.get('subject', '')
+        message = request.POST.get('message', '')
+        if name and email and subject and message:
+            send_mail(
+                'Contact Form Submission',
+                f'Sender: {name}\nEmail: {email}\n\n{message}',
+                'settings.EMAIL_HOST_USER',  # Change this to your actual email host user
+                [email],  # Assuming you want to send an email to the user who submitted the form
+                fail_silently=False
+            )
+            return render(request, "contact.html", {'message': 'Thank you for your message! We will get back to you soon.'})
+        else:
+            return render(request, "contact.html", {'error_message': 'Please fill out all the fields.'})
+    return render(request, "contact.html")
+
 
 def course_detail(request, course_id):
     main_course = get_object_or_404(Course, pk=course_id)
     sub_courses = main_course.sub_courses.all()
-    return render(request, 'courses/sub_course_list.html', {'main_course': main_course, 'sub_courses': sub_courses})
+    return render(request, 'sub_course_list.html', {'main_course': main_course, 'sub_courses': sub_courses})
 
 def sub_course_detail(request, sub_course_id):
     sub_course = get_object_or_404(Course, pk=sub_course_id)
     learning_modules = sub_course.learning_modules.all()
     powerpoint_presentations = sub_course.powerpoint_presentations.all()
-    return render(request, 'courses/sub_course_detail.html', {'sub_course': sub_course, 'learning_modules': learning_modules, 'powerpoint_presentations': powerpoint_presentations})
+    return render(request, 'sub_course_detail.html', {'sub_course': sub_course, 'learning_modules': learning_modules, 'powerpoint_presentations': powerpoint_presentations})
 
 # courses/views.py
 

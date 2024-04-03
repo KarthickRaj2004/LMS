@@ -292,8 +292,9 @@
         <div class="container">
 
             <!-- Brand -->
-            <a class="navbar-brand me-0 filter-none" href="index.html">
-                <img src="{% static '/assets/img/brand-school.svg' %}" class="navbar-brand-img" alt="...">
+            <a class="navbar-brand me-0 filter-none" href="{% url 'contact' %}">
+                    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+            
             </a>
 
             <!-- Collapse -->
@@ -311,15 +312,13 @@
 
                 <!-- Navigation -->
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown dropdown-full-width">
-                        <a class="nav-link dropdown-toggle px-xl-4 text-uppercase" id="navbarLandings" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link  px-xl-4 text-uppercase" id="navbarLandings"  href="#" aria-haspopup="true" aria-expanded="false">
                             Home
                         </a>
                     </li>
-                    <li>
-                        <a class="nav-link dropdown-toggle px-xl-4 text-uppercase" id="navbarShop" data-bs-toggle="dropdown" href="{% url 'contact' %}" aria-haspopup="true" aria-expanded="false">
-                            CONTACT
-                        </a>
+                    <li class="nav-item ">
+                        <a href="{% url 'contact' %}" class="nav-item nav-link">CONTACT</a>
                        
                     </li>
 
@@ -415,7 +414,7 @@
                             </p>
 
                             <!-- Buttons -->
-                            <a href="{% url 'course_list' %}" class="btn btn-slide slide-white btn-wide text-white-alone font-size-sm shadow font-montserrat fw-bold" data-aos-duration="200" data-aos="fade-up">VIEW COURSES</a>
+                            <a href="" class="btn btn-slide slide-white btn-wide text-white-alone font-size-sm shadow font-montserrat fw-bold" data-aos-duration="200" data-aos="fade-up">VIEW COURSES</a>
                         </div>
                     </div>
                 </div>
@@ -997,8 +996,9 @@
                 <div class="col-12 col-md-4 col-lg-4">
 
                     <!-- Brand -->
-                    <img src="{% static 'assets/img/brand-school.svg' %}" alt="..." class="footer-brand img-fluid mb-4 h-60p ">
-
+                    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+                    </a>
                     <!-- Text -->
                     <p class="text-gray-800 mb-4 font-size-sm-alone">
                         329 Queensberry Street, North Melbourne VIC 3051, Australia.

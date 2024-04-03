@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate</title>
+    <link
+      rel="stylesheet"
+      href="{% static '/css/certificate-template.css' %}"
+    />
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js">
+</script>
+  </head>
+  <body>
+    <a href="{% url 'dashboard' %}"
+      ><img
+        class="top-left-image"
+        src="{% static '/image/ps.jpg' %}"
+        alt="Your Image"
+    /></a>
+
+    <div class="certificate">
+      <img
+        id="certificateImage"
+        src="{% static 'image/certificate template.jpg' %}"
+        alt="Certificate of Achievement"
+      />
+      <br /><br /><br /><br /><br />
+      <button class="download-button" onclick="generatePDF()">Download</button>
+    </div>
+
+    <script type="text/javascript">
+      function generatePDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF({
+          orientation: 'landscape', // Set orientation if needed
+          unit: 'mm',
+          format: [180, 140] // Set the format to match the image dimensions
+        });
+    const imgData = '{% static 'image/certificate template.jpg' %}';
+    const imgWidth = 180;
+    const imgHeight = 140;
+
+    doc.addImage({
+      imageData: imgData,
+      format: 'PNG',
+      x: 0,
+      y: 0,
+      width: imgWidth,
+      height: imgHeight,
+      opacity: 0
+    });
+
+    doc.save("certificate.pdf");         
+      }            
+  </script>  
+  </body>
+</html>

@@ -1,0 +1,1348 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from transvelo.github.io/skola-html/5.1/home-v14.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 12:12:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Lora:wght@400;700&amp;family=Montserrat:wght@400;500;600;700&amp;family=Nunito:wght@400;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="{% static 'assets/fonts/fontawesome/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/aos/dist/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/choices.js/public/assets/styles/choices.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flickity-fade/flickity-fade.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flickity/dist/flickity.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/highlightjs/styles/vs2015.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/jarallax/dist/jarallax.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/quill/dist/quill.core.css' %}" />
+
+    <!-- Map -->
+    <link href='../../../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+
+    <title>E-Learning web application</title>
+
+</head>
+<body>
+
+    <!-- MODALS
+    ================================================== -->
+    <!-- Modal Sidebar account -->
+    <div class="modal fade" id="modalExample" tabindex="-1" role="dialog" aria-labelledby="modalExampleTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+
+            <!-- Close -->
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+
+            <!-- Heading -->
+            <h2 class="fw-bold text-center mb-1" id="modalExampleTitle">
+              Schedule a demo with us
+            </h2>
+
+            <!-- Text -->
+            <p class="font-size-lg text-center text-muted mb-6 mb-md-8">
+              We can help you solve company communication.
+            </p>
+
+            <!-- Form -->
+            <form>
+              <div class="row">
+                <div class="col-12 col-md-6">
+
+                  <!-- First name -->
+                  <div class="form-label-group">
+                    <input type="text" class="form-control form-control-flush" id="registrationFirstNameModal" placeholder="First name">
+                    <label for="registrationFirstNameModal">First name</label>
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-6">
+
+                  <!-- Last name -->
+                  <div class="form-label-group">
+                    <input type="text" class="form-control form-control-flush" id="registrationLastNameModal" placeholder="Last name">
+                    <label for="registrationLastNameModal">Last name</label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-6">
+
+                  <!-- Email -->
+                  <div class="form-label-group">
+                    <input type="email" class="form-control form-control-flush" id="registrationEmailModal" placeholder="Email">
+                    <label for="registrationEmailModal">Email</label>
+                  </div>
+
+                </div>
+                <div class="col-12 col-md-6">
+
+                  <!-- Password -->
+                  <div class="form-label-group">
+                    <input type="password" class="form-control form-control-flush" id="registrationPasswordModal" placeholder="Password">
+                    <label for="registrationPasswordModal">Password</label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+
+                  <!-- Submit -->
+                  <button class="btn btn-block btn-primary mt-3 lift">
+                    Request a demo
+                  </button>
+
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal-sidebar left fade-left fade" id="accountModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Signin -->
+                <div class="collapse show" id="collapseSignin" data-bs-parent="#accountModal">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Log In to Your Skola Account!</h5>
+                        <button type="button" class="close text-primary" data-bs-dismiss="modal" aria-label="Close">
+                            <!-- Icon -->
+                            <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.142135 2.00015L1.55635 0.585938L15.6985 14.7281L14.2843 16.1423L0.142135 2.00015Z" fill="currentColor"></path>
+                                <path d="M14.1421 1.0001L15.5563 2.41431L1.41421 16.5564L0 15.1422L14.1421 1.0001Z" fill="currentColor"></path>
+                            </svg>
+
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <!-- Form Signin -->
+                        <form class="mb-5">
+
+                            <!-- Email -->
+                            <div class="form-group mb-5">
+                                <label for="modalSigninEmail">
+                                    Username or Email
+                                </label>
+                                <input type="email" class="form-control" id="modalSigninEmail" placeholder="creativelayers">
+                            </div>
+
+                            <!-- Password -->
+                            <div class="form-group mb-5">
+                                <label for="modalSigninPassword">
+                                    Password
+                                </label>
+                                <input type="password" class="form-control" id="modalSigninPassword" placeholder="**********">
+                            </div>
+
+                            <div class="d-flex align-items-center mb-5 font-size-sm">
+                                <div class="form-check">
+                                    <input class="form-check-input text-gray-800" type="checkbox" id="autoSizingCheck">
+                                    <label class="form-check-label text-gray-800" for="autoSizingCheck">
+                                        Remember me
+                                    </label>
+                                </div>
+
+                                <div class="ms-auto">
+                                    <a class="text-gray-800" data-bs-toggle="collapse" href="#collapseForgotPassword" role="button" aria-expanded="false" aria-controls="collapseForgotPassword">Forgot Password</a>
+                                </div>
+                            </div>
+
+                            <!-- Submit -->
+                            <button class="btn btn-block btn-primary" type="submit">
+                                LOGIN
+                            </button>
+                        </form>
+
+                        <!-- Text -->
+                        <p class="mb-0 font-size-sm text-center">
+                            Don't have an account? <a class="text-underline" data-bs-toggle="collapse" href="#collapseSignup" role="button" aria-expanded="false" aria-controls="collapseSignup">Sign up</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Signup -->
+                <div class="collapse" id="collapseSignup" data-bs-parent="#accountModal">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sign Up and Start Learning!</h5>
+                        <button type="button" class="close text-primary" data-bs-dismiss="modal" aria-label="Close">
+                            <!-- Icon -->
+                            <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.142135 2.00015L1.55635 0.585938L15.6985 14.7281L14.2843 16.1423L0.142135 2.00015Z" fill="currentColor"></path>
+                                <path d="M14.1421 1.0001L15.5563 2.41431L1.41421 16.5564L0 15.1422L14.1421 1.0001Z" fill="currentColor"></path>
+                            </svg>
+
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <!-- Form Signup -->
+                        <form class="mb-5">
+
+                            <!-- Username -->
+                            <div class="form-group mb-5">
+                                <label for="modalSignupUsername">
+                                    Username
+                                </label>
+                                <input type="text" class="form-control" id="modalSignupUsername" placeholder="John">
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group mb-5">
+                                <label for="modalSignupEmail">
+                                    Username or Email
+                                </label>
+                                <input type="email" class="form-control" id="modalSignupEmail" placeholder="johndoe@creativelayers.com">
+                            </div>
+
+                            <!-- Password -->
+                            <div class="form-group mb-5">
+                                <label for="modalSignupPassword">
+                                    Password
+                                </label>
+                                <input type="password" class="form-control" id="modalSignupPassword" placeholder="**********">
+                            </div>
+
+                            <!-- Submit -->
+                            <button class="btn btn-block btn-primary" type="submit">
+                                SIGN UP
+                            </button>
+
+                        </form>
+
+                        <!-- Text -->
+                        <p class="mb-0 font-size-sm text-center">
+                            Already have an account? <a class="text-underline" data-bs-toggle="collapse" href="#collapseSignin" role="button" aria-expanded="true" aria-controls="collapseSignin">Log In</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Forgot Password -->
+                <div class="collapse" id="collapseForgotPassword" data-bs-parent="#accountModal">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Recover password!</h5>
+                        <button type="button" class="close text-primary" data-bs-dismiss="modal" aria-label="Close">
+                            <!-- Icon -->
+                            <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.142135 2.00015L1.55635 0.585938L15.6985 14.7281L14.2843 16.1423L0.142135 2.00015Z" fill="currentColor"></path>
+                                <path d="M14.1421 1.0001L15.5563 2.41431L1.41421 16.5564L0 15.1422L14.1421 1.0001Z" fill="currentColor"></path>
+                            </svg>
+
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <!-- Form Recover Password -->
+                        <form class="mb-5">
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="modalForgotpasswordEmail">
+                                    Email
+                                </label>
+                                <input type="email" class="form-control" id="modalForgotpasswordEmail" placeholder="johndoe@creativelayers.com">
+                            </div>
+
+                            <!-- Submit -->
+                            <button class="btn btn-block btn-primary" type="submit">
+                                RECOVER PASSWORD
+                            </button>
+                        </form>
+
+                        <!-- Text -->
+                        <p class="mb-0 font-size-sm text-center">
+                            Remember your password? <a class="text-underline" data-bs-toggle="collapse" href="#collapseSignin" role="button" aria-expanded="false" aria-controls="collapseSignin">Log In</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Sidebar cart -->
+    
+
+
+    <!-- NAVBAR
+    ================================================== -->
+   
+
+    <header class="navbar navbar-expand-xl navbar-light navbar-custom z-index-1" >
+        <div class="container">
+
+            <!-- Brand -->
+            <a class="navbar-brand me-0 filter-none" href="{% url 'contact' %}">
+                    <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+            
+            </a>
+
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse z-index-lg" id="navbarCollapse">
+
+                <!-- Toggler -->
+                <button class="navbar-toggler outline-0 text-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- Icon -->
+                    <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.142135 2.00015L1.55635 0.585938L15.6985 14.7281L14.2843 16.1423L0.142135 2.00015Z" fill="currentColor"></path>
+                        <path d="M14.1421 1.0001L15.5563 2.41431L1.41421 16.5564L0 15.1422L14.1421 1.0001Z" fill="currentColor"></path>
+                    </svg>
+
+                </button>
+
+                <!-- Navigation -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link  px-xl-4 text-uppercase" id="navbarLandings"  href="#" aria-haspopup="true" aria-expanded="false">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="{% url 'contact' %}" class="nav-item nav-link">CONTACT</a>
+                       
+                    </li>
+
+                    
+                </ul>
+            </div>
+
+            <!-- Search, Account & Cart -->
+            <ul class="navbar-nav flex-row ms-auto ms-xl-0 me-n2 me-md-n4 align-items-center">
+                <li class="nav-item border-0 px-0 d-none d-370-block d-xl-block">
+                    <a class="nav-link d-flex px-3 px-md-4 search-mobile text-rhino icon-xs" data-bs-toggle="collapse" href="#collapseSearchMobile" role="button" aria-expanded="false" aria-controls="collapseSearchMobile">
+                        <!-- Icon -->
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.80758 0C3.95121 0 0 3.95121 0 8.80758C0 13.6642 3.95121 17.6152 8.80758 17.6152C13.6642 17.6152 17.6152 13.6642 17.6152 8.80758C17.6152 3.95121 13.6642 0 8.80758 0ZM8.80758 15.9892C4.8477 15.9892 1.62602 12.7675 1.62602 8.80762C1.62602 4.84773 4.8477 1.62602 8.80758 1.62602C12.7675 1.62602 15.9891 4.8477 15.9891 8.80758C15.9891 12.7675 12.7675 15.9892 8.80758 15.9892Z" fill="currentColor"/>
+                            <path d="M19.762 18.6121L15.1007 13.9509C14.7831 13.6332 14.2687 13.6332 13.9511 13.9509C13.6335 14.2682 13.6335 14.7831 13.9511 15.1005L18.6124 19.7617C18.7712 19.9205 18.9791 19.9999 19.1872 19.9999C19.395 19.9999 19.6032 19.9205 19.762 19.7617C20.0796 19.4444 20.0796 18.9295 19.762 18.6121Z" fill="currentColor"/>
+                        </svg>
+
+
+                        <!-- Icon -->
+                        <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.142135 2.00015L1.55635 0.585938L15.6985 14.7281L14.2843 16.1423L0.142135 2.00015Z" fill="currentColor"></path>
+                            <path d="M14.1421 1.0001L15.5563 2.41431L1.41421 16.5564L0 15.1422L14.1421 1.0001Z" fill="currentColor"></path>
+                        </svg>
+
+                    </a>
+
+                    <div class="collapse position-absolute right-0 left-0 mx-4" id="collapseSearchMobile">
+                        <div class="card card-body p-4 mt-6 mt-xl-4 shadow-dark">
+                            <!-- Search -->
+                            <form class="w-100">
+                                <div class="input-group border rounded">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-sm text-secondary icon-xs d-flex align-items-center" type="submit">
+                                            <!-- Icon -->
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.80758 0C3.95121 0 0 3.95121 0 8.80758C0 13.6642 3.95121 17.6152 8.80758 17.6152C13.6642 17.6152 17.6152 13.6642 17.6152 8.80758C17.6152 3.95121 13.6642 0 8.80758 0ZM8.80758 15.9892C4.8477 15.9892 1.62602 12.7675 1.62602 8.80762C1.62602 4.84773 4.8477 1.62602 8.80758 1.62602C12.7675 1.62602 15.9891 4.8477 15.9891 8.80758C15.9891 12.7675 12.7675 15.9892 8.80758 15.9892Z" fill="currentColor"/>
+                                                <path d="M19.762 18.6121L15.1007 13.9509C14.7831 13.6332 14.2687 13.6332 13.9511 13.9509C13.6335 14.2682 13.6335 14.7831 13.9511 15.1005L18.6124 19.7617C18.7712 19.9205 18.9791 19.9999 19.1872 19.9999C19.395 19.9999 19.6032 19.9205 19.762 19.7617C20.0796 19.4444 20.0796 18.9295 19.762 18.6121Z" fill="currentColor"/>
+                                            </svg>
+
+                                        </button>
+                                    </div>
+                                    <input class="form-control form-control-sm border-0 ps-0" type="search" placeholder="What do you want to learn ?" aria-label="Search">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item border-0 px-0">
+                    <!-- Button trigger account modal -->
+                    <a href="#" class="nav-link d-flex px-3 px-md-4 text-rhino icon-xs" data-bs-toggle="modal" data-bs-target="#accountModal">
+                        <!-- Icon -->
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.2252 3.0777C15.3376 1.10738 12.7258 -0.0045765 9.99712 0.000444175C4.48284 -0.00650109 0.00695317 4.45809 7.91636e-06 9.97242C-0.00342287 12.6991 1.1084 15.3085 3.07726 17.1948C3.08299 17.2005 3.08512 17.209 3.09082 17.2141C3.14864 17.2698 3.21148 17.3169 3.27005 17.3705C3.43071 17.5133 3.59138 17.6611 3.76061 17.7989C3.85128 17.8703 3.94554 17.9417 4.03838 18.0074C4.19833 18.1266 4.35828 18.2459 4.52535 18.3558C4.6389 18.4273 4.756 18.4986 4.87236 18.5701C5.02658 18.6629 5.18012 18.7564 5.33936 18.8414C5.47434 18.9128 5.61211 18.9742 5.74922 19.0392C5.89917 19.1106 6.04698 19.182 6.20049 19.2462C6.354 19.3105 6.50826 19.3605 6.6639 19.4162C6.81954 19.4719 6.9538 19.5233 7.10304 19.569C7.27157 19.6197 7.44436 19.6589 7.61573 19.7011C7.75853 19.736 7.89706 19.776 8.04416 19.8046C8.24123 19.8439 8.44117 19.8689 8.64112 19.896C8.76467 19.9132 8.88534 19.9374 9.01027 19.9496C9.33732 19.9817 9.66718 19.9996 9.99992 19.9996C10.3327 19.9996 10.6626 19.9817 10.9896 19.9496C11.1146 19.9374 11.2352 19.9132 11.3587 19.896C11.5587 19.8689 11.7586 19.8439 11.9557 19.8046C12.0985 19.776 12.2413 19.7332 12.3841 19.7011C12.5555 19.6589 12.7283 19.6196 12.8968 19.569C13.046 19.5233 13.1903 19.4676 13.3359 19.4162C13.4816 19.3648 13.6473 19.3091 13.7994 19.2462C13.9514 19.1834 14.1007 19.1098 14.2506 19.0392C14.3877 18.9742 14.5256 18.9128 14.6605 18.8414C14.8197 18.7564 14.9732 18.6629 15.1275 18.5701C15.2439 18.4986 15.361 18.4337 15.4745 18.3558C15.6416 18.2459 15.8016 18.1267 15.9615 18.0074C16.0543 17.936 16.1485 17.8717 16.2392 17.7989C16.4085 17.6632 16.5691 17.519 16.7298 17.3705C16.7883 17.3169 16.8512 17.2698 16.909 17.2141C16.9147 17.2091 16.9169 17.2005 16.9226 17.1948C20.9046 13.38 21.04 7.05955 17.2252 3.0777ZM15.6203 16.4472C15.4904 16.5614 15.3561 16.6699 15.2205 16.7749C15.1405 16.8363 15.0605 16.897 14.9784 16.9556C14.8491 17.0491 14.7178 17.1377 14.5842 17.2226C14.4871 17.2848 14.3879 17.3447 14.2879 17.4033C14.1622 17.4747 14.0344 17.5461 13.9051 17.6175C13.7909 17.676 13.6745 17.7311 13.5574 17.7853C13.4403 17.8396 13.3111 17.8974 13.1847 17.9481C13.0583 17.9988 12.924 18.0467 12.7919 18.0909C12.6713 18.1323 12.5506 18.1752 12.4285 18.2116C12.2857 18.2544 12.1364 18.2894 11.9886 18.3251C11.8729 18.3522 11.7587 18.383 11.6416 18.4058C11.4724 18.4387 11.2996 18.4615 11.1261 18.4851C11.0275 18.4979 10.9297 18.5158 10.8304 18.5258C10.5562 18.5522 10.2784 18.5679 9.99783 18.5679C9.71722 18.5679 9.43945 18.5522 9.16524 18.5258C9.066 18.5158 8.96818 18.4979 8.8696 18.4851C8.6961 18.4615 8.5233 18.4387 8.35406 18.4058C8.23696 18.383 8.1227 18.3523 8.00705 18.3251C7.85924 18.2894 7.71213 18.2537 7.5672 18.2116C7.44512 18.1752 7.32441 18.1323 7.20375 18.0909C7.07166 18.0452 6.93953 17.9988 6.811 17.9481C6.68248 17.8974 6.5611 17.8417 6.43826 17.7853C6.31542 17.7289 6.20476 17.6761 6.09054 17.6175C5.9613 17.5504 5.83348 17.4797 5.7078 17.4033C5.60784 17.3448 5.50856 17.2848 5.41145 17.2226C5.27794 17.1377 5.14653 17.0491 5.01729 16.9556C4.93516 16.897 4.8552 16.8363 4.77521 16.7749C4.63952 16.6699 4.5053 16.5607 4.37535 16.4472C4.34393 16.4236 4.31536 16.3936 4.28469 16.3664C4.31661 13.9374 5.87708 11.7926 8.17843 11.0146C9.32912 11.562 10.6651 11.562 11.8158 11.0146C14.1171 11.7926 15.6776 13.9374 15.7096 16.3664C15.6796 16.3936 15.651 16.4208 15.6203 16.4472ZM7.50716 5.7256C8.2803 4.3506 10.0217 3.86272 11.3967 4.63586C12.7717 5.409 13.2596 7.15038 12.4864 8.52538C12.2299 8.98159 11.8529 9.35856 11.3967 9.61511C11.3931 9.61511 11.3888 9.61511 11.3845 9.61938C11.1952 9.72477 10.9951 9.80954 10.7876 9.87217C10.7505 9.88288 10.7162 9.89715 10.6769 9.90644C10.6055 9.92501 10.5305 9.93786 10.457 9.9507C10.3185 9.97493 10.1784 9.98898 10.0378 9.99283H9.95641C9.81588 9.98898 9.67576 9.97493 9.53727 9.9507C9.46585 9.93786 9.39016 9.92501 9.31736 9.90644C9.2795 9.89715 9.24594 9.88288 9.2067 9.87217C8.99922 9.80954 8.79911 9.72481 8.60974 9.61938L8.5969 9.61511C7.2219 8.84197 6.73402 7.10059 7.50716 5.7256ZM16.9763 14.9505C16.518 12.8133 15.1107 11.0014 13.1532 10.0286C14.7534 8.28555 14.6375 5.57535 12.8944 3.97522C11.1514 2.3751 8.44117 2.49099 6.84104 4.23404C5.33677 5.8727 5.33677 8.38998 6.84104 10.0286C4.88361 11.0014 3.47624 12.8133 3.01802 14.9505C0.27991 11.0937 1.18681 5.74744 5.04365 3.00933C8.90048 0.271226 14.2467 1.17813 16.9848 5.03496C18.0141 6.48481 18.5666 8.21907 18.5658 9.99714C18.5658 11.7737 18.01 13.5057 16.9763 14.9505Z" fill="currentColor"/>
+                        </svg>
+
+                    </a>
+                </li>
+
+                
+            </ul>
+
+            <!-- Toggler -->
+            <button class="navbar-toggler ms-4 ms-md-5 shadow-none bg-teal text-white icon-xs p-0 outline-0 h-40p w-40p d-flex d-xl-none place-flex-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Icon -->
+                <svg width="25" height="17" viewBox="0 0 25 17" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="25" height="1" fill="currentColor"/>
+                    <rect y="8" width="15" height="1" fill="currentColor"/>
+                    <rect y="16" width="20" height="1" fill="currentColor"/>
+                </svg>
+
+            </button>
+        </div>
+    </header>
+
+
+    <!-- HERO
+    ================================================== -->
+    <section class="">
+        <div class="flickity-button-outset-long flickity-page-dots-white flickity-page-dots-43" data-flickity='{"pageDots": true, "prevNextButtons": false, "cellAlign": "center", "wrapAround": true, "imagesLoaded": true}'>
+            <div class="w-100 py-10 py-lg-12 overlay overlay-custom-gray bg-cover" style="background-image: url('../static/assets/img/covers/cover-16.jpg')">
+                <div class="container my-lg-3">
+                    <div class="row align-items-center py-md-12 mx-0 text-center">
+                        <div class="col-lg-8 mx-auto">
+                            <!-- Heading -->
+                            <h1 class="display-5 fw-bold text-white mb-2 text-capitalize font-lora" data-aos="fade-left" data-aos-duration="150">
+                                Empower your learning journey with just a click!
+                            </h1>
+
+                            <!-- Text -->
+                            <p class="text-white font-montserrat text-capitalize mb-5 px-xl-12" data-aos="fade-up" data-aos-duration="200">
+                                Technology is brining a massive wave of evolution on learning things on different ways.
+                            </p>
+
+                            <!-- Buttons -->
+                            <a href="{% url 'course_list' %}" class="btn btn-slide slide-white btn-wide text-white-alone font-size-sm shadow font-montserrat fw-bold" data-aos-duration="200" data-aos="fade-up">VIEW COURSES</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 py-10 py-lg-12 overlay overlay-custom-gray bg-cover" style="background-image: url('../static/assets/img/covers/cover-14.jpg')">
+                <div class="container my-lg-3">
+                    <div class="row align-items-center py-md-12 mx-0 text-center">
+                        <div class="col-lg-8 mx-auto">
+                            <!-- Heading -->
+                            <h1 class="display-5 fw-bold text-white mb-2 text-capitalize font-lora" data-aos="fade-left" data-aos-duration="150">
+                                Empower your learning journey with just a click!                          </h1>
+
+                            <!-- Text -->
+                            <p class="text-white font-montserrat text-capitalize mb-5 px-xl-12" data-aos="fade-up" data-aos-duration="200">
+                                Technology is brining a massive wave of evolution on learning things on different ways.
+                            </p>
+
+                            <!-- Buttons -->
+                            <a href="course-list-v1.html" class="btn btn-slide slide-white btn-wide text-white-alone font-size-sm shadow font-montserrat fw-bold" data-aos-duration="200" data-aos="fade-up">TAKE A TOUR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 py-10 py-lg-12 overlay overlay-custom-gray bg-cover" style="background-image: url('../static/assets/img/covers/cover-4.jpg')">
+                <div class="container my-lg-3">
+                    <div class="row align-items-center py-md-12 mx-0 text-center">
+                        <div class="col-lg-8 mx-auto">
+                            <!-- Heading -->
+                            <h1 class="display-5 fw-bold text-white mb-2 text-capitalize font-lora" data-aos="fade-left" data-aos-duration="150">
+                                Empower your learning journey with just a click!
+                            </h1>
+
+                            <!-- Text -->
+                            <p class="text-white font-montserrat text-capitalize mb-5 px-xl-12" data-aos="fade-up" data-aos-duration="200">
+                                Technology is brining a massive wave of evolution on learning things on different ways.
+                            </p>
+
+                            <!-- Buttons -->
+                            <a href="course-list-v1.html" class="btn btn-slide slide-white btn-wide text-white-alone font-size-sm shadow font-montserrat fw-bold" data-aos-duration="200" data-aos="fade-up">TAKE A TOUR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100 py-10 py-lg-12 overlay overlay-custom-gray bg-cover" style="background-image: url('../static/assets/img/covers/cover-1.jpg')">
+                <div class="container my-lg-3">
+                    <div class="row align-items-center py-md-12 mx-0 text-center">
+                        <div class="col-lg-8 mx-auto">
+                            <!-- Heading -->
+                            <h1 class="display-5 fw-bold text-white mb-2 text-capitalize font-lora" data-aos="fade-left" data-aos-duration="150">
+                                Empower your learning journey with just a click!
+                            </h1>
+
+                            <!-- Text -->
+                            <p class="text-white font-montserrat text-capitalize mb-5 px-xl-12" data-aos="fade-up" data-aos-duration="200">
+                                Technology is brining a massive wave of evolution on learning things on different ways.
+                            </p>
+
+                            <!-- Buttons -->
+                            <a href="course-list-v1.html" class="btn btn-slide slide-white btn-wide text-white-alone font-size-sm shadow font-montserrat fw-bold" data-aos-duration="200" data-aos="fade-up">TAKE A TOUR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ICON BLOCKS
+    ================================================== -->
+    <section class="py-5 py-md-11 bg-white-ice text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="p-5 d-inline-block rounded-circle mb-6" style="border: 1px solid #F8C994;">
+                        <div class="icon-circle icon-circle-lg" style="background-color: #f5debc; color: #EE8E00;">
+                            <!-- Icon -->
+                            <svg width="50" height="42" viewBox="0 0 50 42" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M40.7772 24.0457L34.8852 20.873C33.9687 20.3794 32.8878 20.4035 31.9939 20.9373C31.1 21.4711 30.5664 22.4115 30.5664 23.4525V30.7043C30.5664 31.7975 31.168 32.7919 32.1364 33.2993C32.5655 33.5241 33.0321 33.6353 33.4971 33.6353C34.0813 33.6353 34.6631 33.4595 35.1637 33.113L41.0558 29.0338C41.9005 28.4491 42.3706 27.4876 42.3133 26.4618C42.2561 25.436 41.6817 24.5328 40.7772 24.0457ZM33.4961 30.7037V23.4526L39.3879 26.6254L33.4961 30.7037Z" fill="currentColor"/>
+                                <path d="M17.1875 19.5352H7.8125C7.00352 19.5352 6.34766 20.191 6.34766 21C6.34766 21.809 7.00352 22.4648 7.8125 22.4648H17.1875C17.9965 22.4648 18.6523 21.809 18.6523 21C18.6523 20.191 17.9965 19.5352 17.1875 19.5352Z" fill="currentColor"/>
+                                <path d="M17.1875 25.7852H7.8125C7.00352 25.7852 6.34766 26.441 6.34766 27.25C6.34766 28.059 7.00352 28.7148 7.8125 28.7148H17.1875C17.9965 28.7148 18.6523 28.059 18.6523 27.25C18.6523 26.441 17.9965 25.7852 17.1875 25.7852Z" fill="currentColor"/>
+                                <path d="M17.1875 32.0352H7.8125C7.00352 32.0352 6.34766 32.691 6.34766 33.5C6.34766 34.309 7.00352 34.9648 7.8125 34.9648H17.1875C17.9965 34.9648 18.6523 34.309 18.6523 33.5C18.6523 32.691 17.9965 32.0352 17.1875 32.0352Z" fill="currentColor"/>
+                                <path d="M45.6055 0.00390625H4.39453C1.97139 0.00390625 0 1.97529 0 4.39844V37.6016C0 40.0247 1.97139 41.9961 4.39453 41.9961H45.6055C48.0286 41.9961 50 40.0247 50 37.6016V4.39844C50 1.97529 48.0286 0.00390625 45.6055 0.00390625ZM4.39453 2.93359H45.6055C46.4132 2.93359 47.0703 3.59072 47.0703 4.39844V12.5039H2.92969V4.39844C2.92969 3.59072 3.58682 2.93359 4.39453 2.93359ZM45.6055 39.0664H4.39453C3.58682 39.0664 2.92969 38.4093 2.92969 37.6016V15.4336H47.0703V37.6016C47.0703 38.4093 46.4132 39.0664 45.6055 39.0664Z" fill="currentColor"/>
+                                <path d="M7.8125 9.18359C8.62151 9.18359 9.27734 8.52776 9.27734 7.71875C9.27734 6.90974 8.62151 6.25391 7.8125 6.25391C7.00349 6.25391 6.34766 6.90974 6.34766 7.71875C6.34766 8.52776 7.00349 9.18359 7.8125 9.18359Z" fill="currentColor"/>
+                                <path d="M14.0625 9.18372C14.8715 9.18372 15.5273 8.52788 15.5273 7.71887C15.5273 6.90986 14.8715 6.25403 14.0625 6.25403C13.2535 6.25403 12.5977 6.90986 12.5977 7.71887C12.5977 8.52788 13.2535 9.18372 14.0625 9.18372Z" fill="currentColor"/>
+                                <path d="M20.3125 9.18359C21.1215 9.18359 21.7773 8.52776 21.7773 7.71875C21.7773 6.90974 21.1215 6.25391 20.3125 6.25391C19.5035 6.25391 18.8477 6.90974 18.8477 7.71875C18.8477 8.52776 19.5035 9.18359 20.3125 9.18359Z" fill="currentColor"/>
+                            </svg>
+
+                        </div>
+                    </div>
+
+                    <h3 class="font-lora fw-bold">Calendar</h3>
+                    <p class="px-lg-7 px-xl-8">Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="p-5 d-inline-block rounded-circle mb-6" style="border: 1px solid #B7B3F8;">
+                        <div class="icon-circle icon-circle-lg" style="background-color: #d3d8f8; color: #5066F5;">
+                            <!-- Icon -->
+                            <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M42.6777 7.32231C37.9558 2.60048 31.6777 0 25 0C18.3223 0 12.0442 2.60048 7.32231 7.32231C2.60038 12.0441 0 18.3223 0 25C0 31.6777 2.60048 37.9558 7.32231 42.6777C12.0441 47.3996 18.3223 50 25 50C31.6777 50 37.9558 47.3995 42.6777 42.6777C47.3996 37.9559 50 31.6777 50 25C50 18.3223 47.3995 12.0442 42.6777 7.32231ZM41.6253 39.5856L40.2162 38.1764C39.4842 37.4445 39.3028 36.3304 39.7647 35.404L41.0257 32.875C42.2388 30.4418 42.88 27.7188 42.88 25C42.88 22.2812 42.2388 19.5581 41.0257 17.125L39.7647 14.596C39.3028 13.6696 39.4842 12.5555 40.2162 11.8236L41.6253 10.4144C45.1758 14.4502 47.1154 19.5763 47.1154 25C47.1154 30.4237 45.1758 35.5498 41.6253 39.5856ZM12.8168 34.1168L11.5559 31.5878C9.49914 27.4627 9.49914 22.5372 11.5559 18.4121L12.8168 15.8831C13.2154 15.0838 13.3953 14.2209 13.3707 13.3701C13.4213 13.3715 13.4719 13.3738 13.5227 13.3738C14.3238 13.3738 15.1315 13.1914 15.8832 12.8167L18.4122 11.5558C22.5373 9.49894 27.4628 9.49904 31.5879 11.5558L34.1169 12.8167C34.9161 13.2152 35.7788 13.395 36.6293 13.3705C36.6048 14.2212 36.7847 15.0838 37.1832 15.883L38.4441 18.412C40.5009 22.5371 40.5009 27.4626 38.4441 31.5877L37.1832 34.1167C36.7847 34.916 36.6048 35.7786 36.6293 36.6291C35.7788 36.6046 34.9161 36.7845 34.1169 37.183L31.5879 38.4439C27.4627 40.5007 22.5372 40.5006 18.4122 38.4439L15.8832 37.183C15.0839 36.7845 14.2213 36.6046 13.3708 36.6291C13.3952 35.7788 13.2153 34.9161 12.8168 34.1168ZM25 2.88462C30.4237 2.88462 35.5498 4.82423 39.5856 8.37471L38.1764 9.78385C37.4446 10.5157 36.3305 10.6973 35.404 10.2353L32.875 8.97433C30.4418 7.76125 27.7188 7.12 25 7.12C22.2812 7.12 19.5581 7.76125 17.125 8.97433L14.596 10.2353C13.6695 10.6972 12.5556 10.5158 11.8236 9.78385L10.4144 8.37471C14.4502 4.82423 19.5763 2.88462 25 2.88462ZM8.37471 10.4144L9.78385 11.8236C10.5158 12.5555 10.6972 13.6696 10.2353 14.596L8.97433 17.125C7.76125 19.5582 7.12 22.2812 7.12 25C7.12 27.7188 7.76125 30.4419 8.97433 32.875L10.2353 35.404C10.6972 36.3304 10.5158 37.4445 9.78385 38.1764L8.37471 39.5856C4.82423 35.5498 2.88462 30.4237 2.88462 25C2.88462 19.5763 4.82423 14.4502 8.37471 10.4144ZM25 47.1154C19.5763 47.1154 14.4502 45.1758 10.4144 41.6253L11.8236 40.2162C12.5555 39.4844 13.6696 39.3028 14.596 39.7647L17.125 41.0257C19.5582 42.2388 22.2812 42.88 25 42.88C27.7188 42.88 30.4419 42.2388 32.875 41.0257L35.404 39.7647C36.3305 39.3029 37.4445 39.4842 38.1764 40.2162L39.5856 41.6253C35.5498 45.1758 30.4237 47.1154 25 47.1154Z" fill="currentColor"/>
+                            </svg>
+
+                        </div>
+                    </div>
+
+                    <h3 class="font-lora fw-bold">Library</h3>
+                    <p class="px-lg-7 px-xl-8">Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                </div>
+
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="p-5 d-inline-block rounded-circle mb-6" style="border: 1px solid #B2F4DC;">
+                        <div class="icon-circle icon-circle-lg" style="background-color: #b2f4dc; color: #00C27C;">
+                            <!-- Icon -->
+                            <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M36.7188 39.7461C36.7188 40.5552 36.063 41.2109 35.2539 41.2109C34.4448 41.2109 33.7891 40.5552 33.7891 39.7461C33.7891 38.937 34.4448 38.2812 35.2539 38.2812C36.063 38.2812 36.7188 38.937 36.7188 39.7461Z" fill="currentColor"/>
+                                <path d="M29.3945 17.7734H31.1108C33.3912 17.7734 35.5354 18.6615 37.1479 20.274C37.429 20.5555 37.8056 20.7031 38.184 20.7031C38.5735 20.7031 38.9503 20.5433 39.2193 20.274C40.1783 19.315 41.3261 18.6146 42.5781 18.2026V22.168C42.5781 22.9771 43.2339 23.6328 44.043 23.6328C44.8521 23.6328 45.5078 22.9771 45.5078 22.168V17.7734H46.9727C47.7818 17.7734 48.4375 17.1177 48.4375 16.3086V1.46484C48.4375 0.655746 47.7818 0 46.9727 0H45.2564C42.659 0 40.1939 0.857925 38.1836 2.4395C36.1732 0.857925 33.7082 0 31.1108 0H29.3945C28.5854 0 27.9297 0.655746 27.9297 1.46484V16.3086C27.9297 17.1177 28.5854 17.7734 29.3945 17.7734ZM45.5078 2.92969V14.8438H45.2564C43.2205 14.8438 41.3033 15.3725 39.6484 16.3033V5.03235C41.2033 3.67355 43.1721 2.92969 45.2564 2.92969H45.5078ZM30.8594 2.92969H31.1108C33.1944 2.92969 35.1643 3.67126 36.7188 5.0293V16.3029C35.025 15.3503 33.107 14.8438 31.1108 14.8438H30.8594V2.92969Z" fill="currentColor"/>
+                                <path d="M3.02734 50H46.9727C47.7818 50 48.4375 49.3443 48.4375 48.5352V33.8867C48.4375 33.0776 47.7818 32.4219 46.9727 32.4219H33.6418C32.9613 29.0829 30.0018 26.5625 26.4648 26.5625H22.0703V25.0675C23.896 23.6919 25 21.5286 25 19.2383V16.6222C25 12.8906 22.3755 9.64966 18.895 9.08356C14.397 8.3519 10.3516 11.7859 10.3516 16.3086V19.2383C10.3516 21.5286 11.4555 23.6919 13.2812 25.0675V26.5625H8.88672C4.8481 26.5625 1.5625 29.8481 1.5625 33.8867V48.5352C1.5625 49.3443 2.21825 50 3.02734 50ZM45.5078 47.0703H25V35.3516H45.5078V47.0703ZM13.2812 16.3086C13.2812 13.6845 15.6109 11.5177 18.4246 11.9755C20.5029 12.3135 22.0703 14.3112 22.0703 16.6222V19.2383C22.0703 20.8031 21.2471 22.2164 19.8685 23.019C19.418 23.2811 19.1406 23.7633 19.1406 24.2851V27.4204L17.6758 28.8853L16.2109 27.4204V24.2851C16.2109 23.7637 15.9336 23.2811 15.4831 23.019C14.1045 22.2164 13.2812 20.8031 13.2812 19.2383V16.3086ZM4.49219 33.8867C4.49219 31.4636 6.46362 29.4922 8.88672 29.4922H14.1392L16.6401 31.9927C16.9258 32.2788 17.3008 32.4219 17.6758 32.4219C18.0508 32.4219 18.4258 32.2788 18.7115 31.9927L21.2124 29.4922H26.4648C28.3745 29.4922 30.0026 30.7167 30.6076 32.4219H23.5352C22.7261 32.4219 22.0703 33.0776 22.0703 33.8867V42.6796C20.8454 41.758 19.3233 41.2109 17.6758 41.2109H10.3516V33.8867C10.3516 33.0776 9.69582 32.4219 8.88672 32.4219C8.07762 32.4219 7.42188 33.0776 7.42188 33.8867V42.6758C7.42188 43.4849 8.07762 44.1406 8.88672 44.1406H17.6758C19.5858 44.1406 21.2147 45.3652 21.8193 47.0703H4.49219V33.8867Z" fill="currentColor"/>
+                            </svg>
+
+                        </div>
+                    </div>
+
+                    <h3 class="font-lora fw-bold">Staff</h3>
+                    <p class="px-lg-7 px-xl-8">Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE GENERAL
+    ================================================== -->
+    <section class="py-5 pt-md-4 pb-md-4 pb-xl-4 bg-white">
+        <div class="container pb-md-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-6 mb-lg-0">
+                    <img class="img-fluid rounded" src="{% static 'assets/img/covers/cover-17.jpg' %}" alt="...">
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="ms-xl-5">
+                        <h1 class="font-lora fw-bold text-black mb-4">Welcome to Skola</h1>
+
+                        <p class="mb-5 line-height-lg">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+
+                        <ul class="mb-6 ps-4">
+                            <li class="mb-5">Creative Study Pattern</li>
+                            <li class="mb-5">Quick Crash Courses</li>
+                            <li class="mb-5">Certification Awarded</li>
+                            <li class="mb-5">Provided with Experimental Examples</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-5 py-md-11 bg-white">
+        <div class="container">
+            <div class="text-center mb-md-8 mb-5 text-capitalize">
+                <h1 class="font-lora fw-bold mb-1">Top Rating Instructors</h1>
+                <p class="font-size-lg">Discover your perfect program in our courses.</p>
+            </div>
+
+            <div class="mx-n3 mx-md-n4" data-flickity='{"pageDots": false,"cellAlign": "left", "wrapAround": true, "imagesLoaded": true}'>
+                <div class="col-6 col-md-4 col-lg-3 text-center py-5 text-md-left px-3 px-md-4">
+                    <div class="card border shadow p-2 lift">
+                        <!-- Image -->
+                        <div class="card-zoom position-relative" style="max-width: 250px;">
+                            <div class="card-float card-hover right-0 left-0 bottom-0 mb-4">
+                                <ul class="nav mx-n4 justify-content-center">
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="instructors-single.html" class="card-img sk-thumbnail img-ratio-4 card-hover-overlay alizarin d-block"><img class="rounded shadow-light-lg img-fluid" src="{% static 'assets/img/instructors/instructor-1.jpg' %}" alt="..."></a>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="card-footer px-3 pt-4 pb-1">
+                            <a href="instructors-single.html" class="d-block"><h6 class="mb-0 font-montserrat fw-semi-bold">Jack Wilson</h6></a>
+                            <span class="font-size-d-sm">Developer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center py-5 text-md-left px-3 px-md-4">
+                    <div class="card border shadow p-2 lift">
+                        <!-- Image -->
+                        <div class="card-zoom position-relative" style="max-width: 250px;">
+                            <div class="card-float card-hover right-0 left-0 bottom-0 mb-4">
+                                <ul class="nav mx-n4 justify-content-center">
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="instructors-single.html" class="card-img sk-thumbnail img-ratio-4 card-hover-overlay alizarin d-block"><img class="rounded shadow-light-lg img-fluid" src="{% static 'assets/img/instructors/instructor-2.jpg' %}" alt="..."></a>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="card-footer px-3 pt-4 pb-1">
+                            <a href="instructors-single.html" class="d-block"><h6 class="mb-0 font-montserrat fw-semi-bold">Anna Richard</h6></a>
+                            <span class="font-size-d-sm">Travel Bloger</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center py-5 text-md-left px-3 px-md-4">
+                    <div class="card border shadow p-2 lift">
+                        <!-- Image -->
+                        <div class="card-zoom position-relative" style="max-width: 250px;">
+                            <div class="card-float card-hover right-0 left-0 bottom-0 mb-4">
+                                <ul class="nav mx-n4 justify-content-center">
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="instructors-single.html" class="card-img sk-thumbnail img-ratio-4 card-hover-overlay alizarin d-block"><img class="rounded shadow-light-lg img-fluid" src="{% static 'assets/img/instructors/instructor-3.jpg' %}" alt="..."></a>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="card-footer px-3 pt-4 pb-1">
+                            <a href="instructors-single.html" class="d-block"><h6 class="mb-0 font-montserrat fw-semi-bold">Kathelen Monero</h6></a>
+                            <span class="font-size-d-sm">Designer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center py-5 text-md-left px-3 px-md-4">
+                    <div class="card border shadow p-2 lift">
+                        <!-- Image -->
+                        <div class="card-zoom position-relative" style="max-width: 250px;">
+                            <div class="card-float card-hover right-0 left-0 bottom-0 mb-4">
+                                <ul class="nav mx-n4 justify-content-center">
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="instructors-single.html" class="card-img sk-thumbnail img-ratio-4 card-hover-overlay alizarin d-block"><img class="rounded shadow-light-lg img-fluid" src="{% static 'assets/img/instructors/instructor-4.jpg' %}" alt="..."></a>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="card-footer px-3 pt-4 pb-1">
+                            <a href="instructors-single.html" class="d-block"><h6 class="mb-0 font-montserrat fw-semi-bold">Kristen Pala</h6></a>
+                            <span class="font-size-d-sm">User Experience Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 text-center py-5 text-md-left px-3 px-md-4">
+                    <div class="card border shadow p-2 lift">
+                        <!-- Image -->
+                        <div class="card-zoom position-relative" style="max-width: 250px;">
+                            <div class="card-float card-hover right-0 left-0 bottom-0 mb-4">
+                                <ul class="nav mx-n4 justify-content-center">
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item px-4">
+                                        <a href="#" class="d-block text-white">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a href="instructors-single.html" class="card-img sk-thumbnail img-ratio-4 card-hover-overlay alizarin d-block"><img class="rounded shadow-light-lg img-fluid" src="{% static 'assets/img/instructors/instructor-2.jpg' %}" alt="..."></a>
+                        </div>
+
+                        <!-- Footer -->
+                        <div class="card-footer px-3 pt-4 pb-1">
+                            <a href="instructors-single.html" class="d-block"><h6 class="mb-0 font-montserrat fw-semi-bold">Anna Richard</h6></a>
+                            <span class="font-size-d-sm">Travel Bloger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL
+    ================================================== -->
+    <section class="py-8 py-md-11 pb-xl-12 position-relative bg-white-ice">
+        <div class="container position-relative">
+            <div class="text-center mb-md-8 mb-5 text-capitalize">
+                <h1 class="font-lora fw-bold mb-1">What Our Students Have To Say</h1>
+                <p class="font-size-lg">Discover your perfect program in our courses.</p>
+            </div>
+
+            <div class="tab-content text-center mb-md-11 mb-8 w-xl-75 mx-auto" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="position-relative">
+                        <div class="card-float top-0 left-0 mt-n6 ms-n11 text-dark-10 icon">
+                            <!-- Icon -->
+                            <svg width="36" height="23" viewBox="0 0 36 23" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.5 23L15.5 -4.76837e-06H10L2.98023e-08 23H9.5ZM29.5 23L35.5 -4.76837e-06H30L20 23H29.5Z" fill="currentColor"/>
+                            </svg>
+
+                        </div>
+                        <p class="mb-0 text-capitalize h4 text-gray-800 fw-normal ">I believe in lifelong learning and Skola is a great place to learn from experts. I've learned a lot and recommend it to all my friends.Programs are available in fall, spring, and summer semesters. Many fall and spring programs offer similar shorter programs in the summer, and some may be combined for a full academic year.</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="position-relative">
+                        <div class="card-float top-0 left-0 mt-n6 ms-n11 text-dark-10 icon">
+                            <!-- Icon -->
+                            <svg width="36" height="23" viewBox="0 0 36 23" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.5 23L15.5 -4.76837e-06H10L2.98023e-08 23H9.5ZM29.5 23L35.5 -4.76837e-06H30L20 23H29.5Z" fill="currentColor"/>
+                            </svg>
+
+                        </div>
+                        <p class="mb-0 text-capitalize h4 text-gray-800 fw-normal ">I believe in lifelong learning and Skola is a great place to learn from experts. I've learned a lot and recommend it to all my friends.Programs are available in fall, spring, and summer semesters. Many fall and spring programs offer similar shorter programs in the summer, and some may be combined for a full academic year.</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="position-relative">
+                        <div class="card-float top-0 left-0 mt-n6 ms-n11 text-dark-10 icon">
+                            <!-- Icon -->
+                            <svg width="36" height="23" viewBox="0 0 36 23" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.5 23L15.5 -4.76837e-06H10L2.98023e-08 23H9.5ZM29.5 23L35.5 -4.76837e-06H30L20 23H29.5Z" fill="currentColor"/>
+                            </svg>
+
+                        </div>
+                        <p class="mb-0 text-capitalize h4 text-gray-800 fw-normal ">I believe in lifelong learning and Skola is a great place to learn from experts. I've learned a lot and recommend it to all my friends.Programs are available in fall, spring, and summer semesters. Many fall and spring programs offer similar shorter programs in the summer, and some may be combined for a full academic year.</p>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="nav row" id="pills-tab" role="tablist">
+                <li class="nav-item col-md-4 mb-4 mb-md-0" role="presentation">
+                    <a class="nav-link p-0 active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+                        <!-- Card -->
+                        <div class="card border p-2 lift rounded-pill">
+                            <div class="row gx-0 align-items-center">
+                                <div class="col-auto">
+                                    <div class="avatar avatar-custom">
+                                        <img src="{% static 'assets/img/avatars/avatar-1.jpg' %}" alt="..." class="avatar-img rounded-circle img-fluid">
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card-body p-0 ms-5">
+                                        <h6 class="font-montserrat fw-bold mb-0">Albert Cole</h6>
+                                        <span class="text-gray-800">Designer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item col-md-4 mb-4 mb-md-0" role="presentation">
+                    <a class="nav-link p-0" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+                        <!-- Card -->
+                        <div class="card border p-2 lift rounded-pill">
+                            <div class="row gx-0 align-items-center">
+                                <div class="col-auto">
+                                    <div class="avatar avatar-custom">
+                                        <img src="{% static 'assets/img/avatars/avatar-2.jpg' %}" alt="..." class="avatar-img rounded-circle img-fluid">
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card-body p-0 ms-5">
+                                        <h6 class="font-montserrat fw-bold mb-0">Alison Dawn</h6>
+                                        <span class="text-gray-800">WordPress Developer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item col-md-4 mb-4 mb-md-0" role="presentation">
+                    <a class="nav-link p-0" id="pills-contact-tab" data-bs-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
+                        <!-- Card -->
+                        <div class="card border p-2 lift rounded-pill">
+                            <div class="row gx-0 align-items-center">
+                                <div class="col-auto">
+                                    <div class="avatar avatar-custom">
+                                        <img src="{% static 'assets/img/avatars/avatar-3.jpg' %}" alt="..." class="avatar-img rounded-circle img-fluid">
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div class="card-body p-0 ms-5">
+                                        <h6 class="font-montserrat fw-bold mb-0">Daniel Parker</h6>
+                                        <span class="text-gray-800">Front-end Developer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- GALLERY
+    ================================================== -->
+    <section class="pt-8 pt-md-11 bg-white">
+        <div class="container">
+            <div class="text-center mb-md-8 mb-5 text-capitalize">
+                <h1 class="font-lora fw-bold mb-1">School Gallery</h1>
+                <p class="font-size-lg">Discover your perfect program in our courses.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-7 mb-6">
+                    <!-- Image -->
+                    <a class="d-block position-relative" href="{% static 'assets/img/photos/photo-15.jpg' %}" data-fancybox data-width="1400" data-height="900">
+                        <img src="{% static 'assets/img/photos/photo-15.jpg' %}" class="img-fluid" alt="...">
+
+                        <div class="center position-absolute text-center text-capitalize hover-visible">
+                            <div class="mb-4 text-white">
+                                <!-- Icon -->
+                                <svg width="30" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.3272 10.8975H20.6028V16.5998H14.8105V19.4059H20.6028V25.1982H23.3272V19.4059H29.1113V16.5998H23.3272V10.8975Z" fill="currentColor"></path>
+                                    <path d="M21.9604 0C11.9957 0 3.91267 8.07486 3.91267 18.0478C3.91267 22.4411 5.48346 26.4662 8.09327 29.5996L0.509281 37.11C-0.16976 37.789 -0.16976 38.8117 0.509281 39.4907C1.18832 40.1698 2.21097 40.1698 2.89001 39.4907L10.4413 31.9395C13.5665 34.5329 17.5753 36.0873 21.9522 36.0873C31.917 36.0873 40 28.0125 40 18.0396C40 8.06668 31.9251 0 21.9604 0ZM21.9604 32.7739C13.8283 32.7739 7.23424 26.1799 7.23424 18.0478C7.23424 9.91563 13.8283 3.32157 21.9604 3.32157C30.0926 3.32157 36.6866 9.91563 36.6866 18.0478C36.6866 26.1799 30.0926 32.7739 21.9604 32.7739Z" fill="currentColor"></path>
+                                </svg>
+
+                            </div>
+
+                            <h2 class="font-size-xl fw-semi-bold text-white font-montserrat mw-xl-200p mb-0">Friendly team in each class</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-5 mb-6">
+                    <!-- Image -->
+                    <a class="d-block position-relative" href="{% static 'assets/img/photos/photo-16.jpg' %}" data-fancybox data-width="1200" data-height="1149">
+                        <img src="{% static 'assets/img/photos/photo-16.jpg' %}" class="img-fluid" alt="...">
+
+                        <div class="center position-absolute text-center text-capitalize hover-visible">
+                            <div class="mb-4 text-white">
+                                <!-- Icon -->
+                                <svg width="30" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.3272 10.8975H20.6028V16.5998H14.8105V19.4059H20.6028V25.1982H23.3272V19.4059H29.1113V16.5998H23.3272V10.8975Z" fill="currentColor"></path>
+                                    <path d="M21.9604 0C11.9957 0 3.91267 8.07486 3.91267 18.0478C3.91267 22.4411 5.48346 26.4662 8.09327 29.5996L0.509281 37.11C-0.16976 37.789 -0.16976 38.8117 0.509281 39.4907C1.18832 40.1698 2.21097 40.1698 2.89001 39.4907L10.4413 31.9395C13.5665 34.5329 17.5753 36.0873 21.9522 36.0873C31.917 36.0873 40 28.0125 40 18.0396C40 8.06668 31.9251 0 21.9604 0ZM21.9604 32.7739C13.8283 32.7739 7.23424 26.1799 7.23424 18.0478C7.23424 9.91563 13.8283 3.32157 21.9604 3.32157C30.0926 3.32157 36.6866 9.91563 36.6866 18.0478C36.6866 26.1799 30.0926 32.7739 21.9604 32.7739Z" fill="currentColor"></path>
+                                </svg>
+
+                            </div>
+
+                            <h2 class="font-size-xl fw-semi-bold text-white font-montserrat mw-xl-200p mb-0">Friendly team in each class</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-5 mb-6">
+                    <!-- Image -->
+                    <a class="d-block position-relative" href="{% static 'assets/img/photos/photo-17.jpg' %}" data-fancybox data-width="1200" data-height="1149">
+                        <img src="{% static 'assets/img/photos/photo-17.jpg' %}" class="img-fluid" alt="...">
+
+                        <div class="center position-absolute text-center text-capitalize hover-visible">
+                            <div class="mb-4 text-white">
+                                <!-- Icon -->
+                                <svg width="30" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.3272 10.8975H20.6028V16.5998H14.8105V19.4059H20.6028V25.1982H23.3272V19.4059H29.1113V16.5998H23.3272V10.8975Z" fill="currentColor"></path>
+                                    <path d="M21.9604 0C11.9957 0 3.91267 8.07486 3.91267 18.0478C3.91267 22.4411 5.48346 26.4662 8.09327 29.5996L0.509281 37.11C-0.16976 37.789 -0.16976 38.8117 0.509281 39.4907C1.18832 40.1698 2.21097 40.1698 2.89001 39.4907L10.4413 31.9395C13.5665 34.5329 17.5753 36.0873 21.9522 36.0873C31.917 36.0873 40 28.0125 40 18.0396C40 8.06668 31.9251 0 21.9604 0ZM21.9604 32.7739C13.8283 32.7739 7.23424 26.1799 7.23424 18.0478C7.23424 9.91563 13.8283 3.32157 21.9604 3.32157C30.0926 3.32157 36.6866 9.91563 36.6866 18.0478C36.6866 26.1799 30.0926 32.7739 21.9604 32.7739Z" fill="currentColor"></path>
+                                </svg>
+
+                            </div>
+
+                            <h2 class="font-size-xl fw-semi-bold text-white font-montserrat mw-xl-200p mb-0">Friendly team in each class</h2>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-7 mb-6">
+                    <!-- Image -->
+                    <a class="d-block position-relative" href="{% static 'assets/img/photos/photo-18.jpg' %}" data-fancybox data-width="1400" data-height="900">
+                        <img src="{% static 'assets/img/photos/photo-18.jpg' %}" class="img-fluid" alt="...">
+
+                        <div class="center position-absolute text-center text-capitalize hover-visible">
+                            <div class="mb-4 text-white">
+                                <!-- Icon -->
+                                <svg width="30" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M23.3272 10.8975H20.6028V16.5998H14.8105V19.4059H20.6028V25.1982H23.3272V19.4059H29.1113V16.5998H23.3272V10.8975Z" fill="currentColor"></path>
+                                    <path d="M21.9604 0C11.9957 0 3.91267 8.07486 3.91267 18.0478C3.91267 22.4411 5.48346 26.4662 8.09327 29.5996L0.509281 37.11C-0.16976 37.789 -0.16976 38.8117 0.509281 39.4907C1.18832 40.1698 2.21097 40.1698 2.89001 39.4907L10.4413 31.9395C13.5665 34.5329 17.5753 36.0873 21.9522 36.0873C31.917 36.0873 40 28.0125 40 18.0396C40 8.06668 31.9251 0 21.9604 0ZM21.9604 32.7739C13.8283 32.7739 7.23424 26.1799 7.23424 18.0478C7.23424 9.91563 13.8283 3.32157 21.9604 3.32157C30.0926 3.32157 36.6866 9.91563 36.6866 18.0478C36.6866 26.1799 30.0926 32.7739 21.9604 32.7739Z" fill="currentColor"></path>
+                                </svg>
+
+                            </div>
+
+                            <h2 class="font-size-xl fw-semi-bold text-white font-montserrat mw-xl-200p mb-0">Friendly team in each class</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER & SOCIAL
+    ================================================== -->
+   
+
+    <!-- FOOTER
+    ================================================== -->
+    <footer class="pt-8 pt-md-11 bg-alizarin bg-darken white-100 white-img-100 font-montserrat footer-font-lora">
+        <div class="container pt-3">
+            <div class="row" id="accordionFooter">
+                <div class="col-12 col-md-4 col-lg-4">
+
+                    <!-- Brand -->
+                    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+                        <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
+                    </a>
+                    <!-- Text -->
+                    <p class="text-gray-800 mb-4 font-size-sm-alone">
+                        329 Queensberry Street, North Melbourne VIC 3051, Australia.
+                    </p>
+
+                    <div class="mb-4">
+                        <a href="tel:1234567890" class="text-gray-800 font-size-sm-alone">123 456 7890</a>
+                    </div>
+
+                    <div class="mb-4">
+                        <a href="mailto:support@skola.com" class="text-gray-800 font-size-sm-alone">support@skola.com</a>
+                    </div>
+
+                    <!-- Social -->
+                    <ul class="list-unstyled list-inline list-social mb-4 mb-md-0 mx-n2 text-white-70 font-size-sm">
+                        <li class="list-inline-item list-social-item">
+                            <a href="#" class="w-36 h-36 bg-white-hover shadow-dark-hover rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item list-social-item">
+                            <a href="#" class="w-36 h-36 bg-white-hover shadow-dark-hover rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item list-social-item">
+                            <a href="#" class="w-36 h-36 bg-white-hover shadow-dark-hover rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item list-social-item">
+                            <a href="#" class="w-36 h-36 bg-white-hover shadow-dark-hover rounded-circle d-flex align-items-center justify-content-center">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2">
+                    <div class="mb-5 mb-xl-0 footer-accordion">
+
+                        <!-- Heading -->
+                        <div id="widgetOne">
+                            <h5 class="mb-5">
+                                <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseOne" aria-expanded="true" aria-controls="widgetcollapseOne">
+                                    Our Company
+                                    <span class="ms-auto text-dark">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
+                                            <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
+                                        </svg>
+
+                                    </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="widgetcollapseOne" class="collapse show" aria-labelledby="widgetOne" data-parent="#accordionFooter">
+                            <!-- List -->
+                            <ul class="list-unstyled text-gray-800 font-size-sm-alone mb-6 mb-md-8 mb-lg-0">
+                                <li class="mb-3">
+                                    <a href="about-v1.html" class="text-reset">
+                                        Our Company
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="about-v2.html" class="text-reset">
+                                        About Us
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="contact-us.html" class="text-reset">
+                                        Contact Us
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="contact-us.html" class="text-reset">
+                                        Community
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="course-list-v1.html" class="text-reset">
+                                        Student Perks
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="blog-grid-v1.html" class="text-reset">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="pricing.html" class="text-reset">
+                                        Affiliate Program
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="contact-us.html" class="text-reset">
+                                        Careers
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2">
+                    <div class="mb-5 mb-xl-0 ms-xl-6 footer-accordion">
+
+                        <!-- Heading -->
+                        <div id="widgetTwo">
+                            <h5 class="mb-5">
+                                <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseTwo" aria-expanded="false" aria-controls="widgetcollapseTwo">
+                                    Topics
+                                    <span class="ms-auto text-dark">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
+                                            <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
+                                        </svg>
+
+                                    </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="widgetcollapseTwo" class="collapse" aria-labelledby="widgetTwo" data-parent="#accordionFooter">
+                            <!-- List -->
+                            <ul class="list-unstyled text-gray-800 font-size-sm-alone mb-6 mb-md-8 mb-lg-0">
+                                <li class="mb-3">
+                                    <a href="course-list-v2.html" class="text-reset">
+                                        HTML
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="course-list-v2.html" class="text-reset">
+                                        CSS
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="course-list-v6.html" class="text-reset">
+                                        Design
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="course-list-v5.html" class="text-reset">
+                                        JavaScript
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="course-list-v4.html" class="text-reset">
+                                        Ruby
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="course-list-v1.html" class="text-reset">
+                                        PHP
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="course-list-v3.html" class="text-reset">
+                                        Android
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="course-list-v4.html" class="text-reset">
+                                        Development Tools
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="course-list-v6.html" class="text-reset">
+                                        Business
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+                    <div class="mb-5 mb-xl-0 ms-xl-6 footer-accordion">
+
+                        <!-- Heading -->
+                        <div id="widgetThree">
+                            <h5 class="mb-5">
+                                <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseThree" aria-expanded="false" aria-controls="widgetcollapseThree">
+                                    Tracks
+                                    <span class="ms-auto text-dark">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
+                                            <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
+                                        </svg>
+
+                                    </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="widgetcollapseThree" class="collapse" aria-labelledby="widgetThree" data-parent="#accordionFooter">
+                            <!-- List -->
+                            <ul class="list-unstyled text-gray-800 font-size-sm-alone mb-0">
+                                <li class="mb-3">
+                                    <a href="lesson-single-v1.html" class="text-reset">
+                                        Web Design
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="lesson-single-v2.html" class="text-reset">
+                                        Web Development
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="lesson-single-v1.html" class="text-reset">
+                                        Rails Development
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="lesson-single-v2.html" class="text-reset">
+                                        PHP Development
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="lesson-single-v1.html" class="text-reset">
+                                        Android Development
+                                    </a>
+                                </li>
+                                <li class="mb-3">
+                                    <a href="lesson-single-v2.html" class="text-reset">
+                                        Starting a Business
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2 d-xl-flex">
+                    <div class="mb-5 mb-xl-0 ms-xl-auto footer-accordion">
+
+                        <!-- Heading -->
+                        <div id="widgetFour">
+                            <h5 class="mb-5">
+                                <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseFour" aria-expanded="false" aria-controls="widgetcollapseFour">
+                                    Support
+                                    <span class="ms-auto text-dark">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
+                                            <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
+                                        </svg>
+
+                                    </span>
+                                </button>
+                            </h5>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <div class="col-12 mt-md-5">
+                    <div class="border-top border-white-10 pb-5 pt-6 py-md-4 text-center text-xl-start d-flex flex-column d-md-block d-xl-flex flex-xl-row align-items-center">
+                        <p class="text-gray-800 font-size-sm-alone d-block mb-0 mb-md-2 mb-xl-0 order-1 order-md-0 px-9 px-md-0">Copyright © 2021 CreativeLayers. All Right Reserved.</p>
+
+                        <div class="ms-xl-auto d-flex flex-column flex-md-row align-items-stretch align-items-md-center justify-content-center">
+                            <ul class="navbar-nav flex-row flex-wrap font-size-sm-alone mb-3 mb-md-0 mx-n4 me-md-5 justify-content-center justify-content-lg-start order-1 order-md-0">
+                                <li class="nav-item py-2 py-md-0 px-0 border-top-0">
+                                    <a href="index.html" class="nav-link px-4 fw-normal text-gray-800">Home</a>
+                                </li>
+                                <li class="nav-item py-2 py-md-0 px-0 border-top-0">
+                                    <a href="terms-of-service.html" class="nav-link px-4 fw-normal text-gray-800">Site Map</a>
+                                </li>
+                                <li class="nav-item py-2 py-md-0 px-0 border-top-0">
+                                    <a href="terms-of-service.html" class="nav-link px-4 fw-normal text-gray-800">Privacy policy</a>
+                                </li>
+                                <li class="nav-item py-2 py-md-0 px-0 border-top-0">
+                                    <a href="terms-of-service.html" class="nav-link px-4 fw-normal text-gray-800">Web Use Policy</a>
+                                </li>
+                                <li class="nav-item py-2 py-md-0 px-0 border-top-0">
+                                    <a href="terms-of-service.html" class="nav-link px-4 fw-normal text-gray-800">Cookie Policy</a>
+                                </li>
+                            </ul>
+
+                            <select class="form-select form-select-sm custom-select-white-off border-0 font-size-sm-alone bg-white-10 text-white shadow min-width-140 text-left mb-4 mb-md-0" data-choices>
+                                <option>English</option>
+                                <option>Tamil</option>
+                                <option>French</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+        </div> <!-- / .container -->
+    </footer>
+
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Libs JS -->
+    <script src="{% static 'assets/libs/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/libs/%40fancyapps/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'assets/libs/aos/dist/aos.js' %}"></script>
+    <script src="{% static 'assets/libs/choices.js/public/assets/scripts/choices.min.js' %}"></script>
+    <script src="{% static 'assets/libs/countup.js/dist/countUp.min.js' %}"></script>
+    <script src="{% static 'assets/libs/dropzone/dist/min/dropzone.min.js' %}"></script>
+    <script src="{% static 'assets/libs/flickity/dist/flickity.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/libs/flickity-fade/flickity-fade.js' %}"></script>
+    <script src="{% static 'assets/libs/highlightjs/highlight.pack.min.js' %}"></script>
+    <script src="{% static 'assets/libs/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/libs/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/libs/jarallax/dist/jarallax.min.js' %}"></script>
+    <script src="{% static 'assets/libs/jarallax/dist/jarallax-video.min.js' %}"></script>
+    <script src="{% static 'assets/libs/jarallax/dist/jarallax-element.min.js' %}"></script>
+    <script src="{% static 'assets/libs/parallax-js/dist/parallax.min.js' %}"></script>
+    <script src="{% static 'assets/libs/quill/dist/quill.min.js' %}"></script>
+    <script src="{% static 'assets/libs/smooth-scroll/dist/smooth-scroll.min.js' %}"></script>
+    <script src="{% static 'assets/libs/typed.js/lib/typed.min.js' %}"></script>
+
+    <!-- Map -->
+    <script src='../../../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+
+    <!-- Theme JS -->
+    <script src="{% static 'assets/js/theme.min.js' %}"></script>
+
+
+</body>
+
+<!-- Mirrored from transvelo.github.io/skola-html/5.1/home-v14.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 12:12:50 GMT -->
+</html>
